@@ -10,7 +10,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.springframework.data.redis.core.RedisHash;
+
 @Entity
+@RedisHash("student_details")
 public class StudentDetails implements Serializable{
 	/**
 	 * 
@@ -32,6 +35,10 @@ public class StudentDetails implements Serializable{
 		this.name=name;
 	}
 
+	public StudentDetails(int i, String string) {
+		this.id=i;
+		this.name=string;
+	}
 	public Integer getId() {
 		return id;
 	}
