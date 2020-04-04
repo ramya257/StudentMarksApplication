@@ -128,10 +128,6 @@ public class StudentMarksMainApplication{
 		@Override
 		public StudentMarksSum call() throws Exception {
 			StudentMarksSum studentMarksSum= new StudentMarksSum();
-			System.out.println("Paper 1: "+paper1_marks);
-			System.out.println("Paper 2: "+paper2_marks);
-			System.out.println("Paper 3: "+paper3_marks);
-			System.out.println("Paper 4: "+paper4_marks);
 			sum=paper1_marks+paper2_marks+paper3_marks+paper4_marks;
 			studentMarksSum.setTotalMarks(sum);
 			studentMarksSum.setStudentId(studentId);
