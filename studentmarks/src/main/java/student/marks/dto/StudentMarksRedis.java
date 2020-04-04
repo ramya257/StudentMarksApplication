@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 import org.springframework.data.redis.core.RedisHash;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 @RedisHash("student_marks")
 public class StudentMarksRedis implements Serializable{
 	/**
